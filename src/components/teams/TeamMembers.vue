@@ -47,7 +47,7 @@ export default {
         const response = await axios.get(
           "http://127.0.0.1:8000/api/courses/" + teamId + "/users",
           {
-            headers: { Authorization: "Bearer " + this.$store.state.token },
+            headers: { Authorization: "Bearer " + this.$store.getters.token },
           }
         );
         this.teamName = response.data.data.courseName;
